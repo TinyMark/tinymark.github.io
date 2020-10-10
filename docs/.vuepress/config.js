@@ -4,18 +4,15 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Blog', link: '/blog/' },
-            { text: 'External', link: 'https://google.com' },
             {
-                text: 'Languages',
-                ariaLabel: 'Language Menu',
+                text: 'Blog',
                 items: [
-                    { text: 'Chinese', link: '/language/chinese/' },
-                    { text: 'Japanese', link: '/language/japanese/' }
+                    { text: '拾遗', link: '/blog/notes/notes.md' },
                 ]
             }
         ],
         sidebar: 'auto',
-        lastUpdated: '最后更新时间'
+        lastUpdated: '上次更新', // 最后更新时间
+        smoothScroll: true // 页面滚动效果
     }
 }

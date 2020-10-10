@@ -1120,7 +1120,7 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-nprogress@1.5.4":
+"@vuepress/plugin-nprogress@1.5.4", "@vuepress/plugin-nprogress@^1.5.4":
   version "1.5.4"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.5.4.tgz#b818ebcac5addb6488bf50eb21585450f52ae40c"
   integrity sha1-uBjrysWt22SIv1DrIVhUUPUq5Aw=

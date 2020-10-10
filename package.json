@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp",
+    "dev": "vuepress dev docs --no-cache",
     "build": "vuepress build docs"
   },
   "devDependencies": {
+    "@vuepress/plugin-nprogress": "^1.5.4",
     "vuepress": "^1.5.4"
   }
 }

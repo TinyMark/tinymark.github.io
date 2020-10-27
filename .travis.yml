@@ -1,14 +1,25 @@
 language: node_js
-node_js:
-  - lts/*
+node_js: stable
+
 install:
-  - yarn install # npm ci
+  - npm i
+
 script:
-  - yarn build # npm run build
-deploy:
-  provider: pages
-  local_dir: docs/.vuepress/dist
-  github_token: $T_TOKEN # 在 GitHub 中生成，用于允许 Travis 向你的仓库推送代码。在 Travis 的项目设置页面进行配置，设置为 secure variable
-  keep_history: true
-  on:
-    branch: master
+  - npm run build
+
+after_script:
+  - cd docs\.vuepress\dist
+  - git init
+  - git config user.name "tinymark"
+  - git config user.email "bladem@163.com"
+  - git add .
+  - git commit -m "提交"
+  - git push --force --quiet https://${GH_TOKEN}@${GH_REF} master:master
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - GH_REF: github.com:TinyMark/TinyMark.github.io.git
